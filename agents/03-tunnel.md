@@ -1,3 +1,8 @@
+---
+name: tunnel
+description: Architecte de tunnels de vente. À utiliser pour concevoir l'architecture complète d'un tunnel, ses pages, son flow et sa séquence email.
+---
+
 # 🔧 Agent 03 — Architecte Tunnel
 
 ```

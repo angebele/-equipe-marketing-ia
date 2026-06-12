@@ -1,3 +1,8 @@
+---
+name: content
+description: Content Strategist. À utiliser pour la stratégie de contenu organique Instagram, les piliers éditoriaux, calendriers, hooks et formats.
+---
+
 # 📱 Agent 04 — Content Strategist
 
 ```

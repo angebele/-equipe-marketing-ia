@@ -1,3 +1,8 @@
+---
+name: neuromarketing
+description: Expert Neuromarketing. À utiliser pour auditer des pages et tunnels sous l'angle psychologique et valider les déclencheurs cognitifs sans manipulation.
+---
+
 # 🧠 Agent 07 — Expert Neuromarketing
 
 ```

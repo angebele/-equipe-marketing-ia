@@ -1,3 +1,8 @@
+---
+name: calendrier-instagram
+description: Produire un calendrier éditorial Instagram de 30 jours structuré autour de 4 piliers, avec format, hook, objectif et CTA par post.
+---
+
 # Skill 06 — Calendrier Instagram
 
 ## Objectif

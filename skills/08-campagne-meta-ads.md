@@ -1,3 +1,8 @@
+---
+name: campagne-meta-ads
+description: Structurer une campagne Meta Ads de la phase test au scale (3 adsets x 3 annonces), avec décisions pilotées par les métriques.
+---
+
 # Skill 08 — Campagne Meta Ads
 
 ## Objectif

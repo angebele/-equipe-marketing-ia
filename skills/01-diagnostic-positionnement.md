@@ -1,3 +1,8 @@
+---
+name: diagnostic-positionnement
+description: Analyser un positionnement en 5 axes (promesse, cible, différence, preuve, canal) pour identifier ce qui est flou, incohérent ou sous-exploité.
+---
+
 # Skill 01 — Diagnostic de positionnement
 
 ## Objectif

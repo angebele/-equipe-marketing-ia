@@ -1,3 +1,8 @@
+---
+name: detection-opportunites
+description: Identifier les angles, niches et formats non exploités par les concurrents (5 types d'opportunités) que le projet peut occuper en premier.
+---
+
 # Skill 15 — Détection d'opportunités
 
 ## Objectif

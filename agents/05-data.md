@@ -1,3 +1,8 @@
+---
+name: data
+description: Data Analyst marketing. À utiliser pour définir des KPIs, construire des dashboards, analyser un tunnel et prioriser des A/B tests.
+---
+
 # 📈 Agent 05 — Data Analyst
 
 ```

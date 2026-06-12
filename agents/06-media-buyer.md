@@ -1,3 +1,8 @@
+---
+name: media-buyer
+description: Media Buyer Meta Ads. À utiliser pour concevoir, structurer et optimiser des campagnes publicitaires Facebook/Instagram du test au scale.
+---
+
 # 🎯 Agent 06 — Media Buyer
 
 ```

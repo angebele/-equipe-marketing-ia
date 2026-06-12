@@ -1,3 +1,8 @@
+---
+name: sequence-email
+description: Construire une séquence de 7 emails (bienvenue, valeur, objection, preuve, urgence, dernière chance) qui transforme un lead en prospect prêt à acheter.
+---
+
 # Skill 04 — Séquence email
 
 ## Objectif

@@ -1,3 +1,8 @@
+---
+name: copywriter
+description: Copywriter expert. À utiliser pour rédiger des pages de vente, séquences d'emails, scripts, accroches et hooks qui convertissent.
+---
+
 # ✍️ Agent 02 — Copywriter
 
 ```

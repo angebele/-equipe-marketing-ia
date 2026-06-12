@@ -1,3 +1,8 @@
+---
+name: audit-psychologique
+description: Évaluer une page ou un email sous l'angle psychologique via une checklist 10 points avec scoring et recommandations priorisées, sans manipulation.
+---
+
 # Skill 10 — Audit psychologique
 
 ## Objectif

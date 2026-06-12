@@ -1,3 +1,8 @@
+---
+name: page-de-vente
+description: Rédiger une page de vente complète en 12 sections selon une séquence psychologique éprouvée, adaptée à la cible prioritaire.
+---
+
 # Skill 03 — Page de vente
 
 ## Objectif

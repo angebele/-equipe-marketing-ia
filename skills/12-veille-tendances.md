@@ -1,3 +1,8 @@
+---
+name: veille-tendances
+description: Identifier ce qui monte dans le secteur ce mois-ci (sujets, douleurs émergentes, formats, vocabulaire cible) pour anticiper les angles à exploiter.
+---
+
 # Skill 12 — Veille tendances
 
 ## Objectif

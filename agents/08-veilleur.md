@@ -1,3 +1,8 @@
+---
+name: veilleur
+description: Veilleur Stratégique. À utiliser pour la veille concurrentielle, l'analyse des tendances de marché et la détection d'opportunités de positionnement.
+---
+
 # 🔍 Agent 08 — Veilleur Stratégique
 
 ```

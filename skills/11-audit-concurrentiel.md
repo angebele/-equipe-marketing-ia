@@ -1,3 +1,8 @@
+---
+name: audit-concurrentiel
+description: Analyser un concurrent direct sur 8 axes (offre, positionnement, contenu, tunnel, copy, communauté, forces, angles libres) pour identifier les opportunités de différenciation.
+---
+
 # Skill 11 — Audit concurrentiel
 
 ## Objectif

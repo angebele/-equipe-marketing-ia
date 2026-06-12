@@ -1,0 +1,10 @@
+{
+  "name": "equipe-marketing-ia",
+  "displayName": "Équipe Marketing IA",
+  "description": "8 agents spécialisés en stratégie, copywriting, tunnel de vente, contenu et veille de marché. Réutilisable sur tous les projets.",
+  "version": "1.1.0",
+  "author": {
+    "name": "Ange Belegue — Ambitieuse Assumée"
+  },
+  "keywords": ["marketing", "copywriting", "tunnel-de-vente", "contenu", "strategie"]
+}

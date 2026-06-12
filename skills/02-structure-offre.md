@@ -1,3 +1,8 @@
+---
+name: structure-offre
+description: Structurer une offre en 7 blocs (nom, promesse, format, prix, livrables, garantie, bonus) pour la rendre lisible, désirable et pricée.
+---
+
 # Skill 02 — Structure d'offre
 
 ## Objectif

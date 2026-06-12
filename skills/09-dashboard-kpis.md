@@ -1,3 +1,8 @@
+---
+name: dashboard-kpis
+description: Construire un dashboard en 4 tableaux (tunnel, email, contenu, business) avec objectifs et seuils d'alerte, plus un rituel hebdomadaire.
+---
+
 # Skill 09 — Dashboard KPIs
 
 ## Objectif

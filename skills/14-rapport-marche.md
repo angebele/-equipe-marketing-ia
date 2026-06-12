@@ -1,3 +1,8 @@
+---
+name: rapport-marche
+description: Produire une synthèse mensuelle du marché en une page, actionnable en 5 minutes, avec recommandations par agent de l'équipe.
+---
+
 # Skill 14 — Rapport mensuel de marché
 
 ## Objectif

@@ -1,3 +1,8 @@
+---
+name: carte-positionnement
+description: Cartographier les concurrents sur deux axes pour visualiser les zones libres et recommander une position différente et désirable.
+---
+
 # Skill 13 — Carte de positionnement
 
 ## Objectif

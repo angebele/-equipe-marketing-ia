@@ -1,3 +1,8 @@
+---
+name: architecture-tunnel
+description: Concevoir le schéma complet d'un tunnel de vente en 6 étapes, du premier contact à la confirmation, avec objectif et KPI par étape.
+---
+
 # Skill 05 — Architecture de tunnel
 
 ## Objectif

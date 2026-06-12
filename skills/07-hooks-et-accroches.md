@@ -1,3 +1,8 @@
+---
+name: hooks-et-accroches
+description: Produire des premières lignes qui stoppent le scroll, à partir de 10 formules de hooks adaptées aux profils cibles.
+---
+
 # Skill 07 — Hooks et accroches
 
 ## Objectif
