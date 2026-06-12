@@ -1,7 +1,7 @@
 {
   "name": "Équipe Marketing IA",
-  "version": "1.0.0",
-  "description": "7 agents spécialisés en stratégie, copywriting, tunnel de vente et contenu. Réutilisable sur tous les projets.",
+  "version": "1.1.0",
+  "description": "8 agents spécialisés en stratégie, copywriting, tunnel de vente, contenu et veille de marché. Réutilisable sur tous les projets.",
   "author": "Ange Belegue — Ambitieuse Assumée",
   "default_agent": "cmo",
   "agents": [
@@ -11,7 +11,8 @@
     { "id": "content", "file": "agents/04-content.md", "emoji": "📱", "label": "Content Strategist" },
     { "id": "data", "file": "agents/05-data.md", "emoji": "📈", "label": "Data Analyst" },
     { "id": "media", "file": "agents/06-media-buyer.md", "emoji": "🎯", "label": "Media Buyer" },
-    { "id": "neuro", "file": "agents/07-neuromarketing.md", "emoji": "🧠", "label": "Neuromarketing" }
+    { "id": "neuro", "file": "agents/07-neuromarketing.md", "emoji": "🧠", "label": "Neuromarketing" },
+    { "id": "veilleur", "file": "agents/08-veilleur.md", "emoji": "🔍", "label": "Veilleur Stratégique" }
   ],
   "skills": [
     "skills/01-diagnostic-positionnement.md",
@@ -23,7 +24,12 @@
     "skills/07-hooks-et-accroches.md",
     "skills/08-campagne-meta-ads.md",
     "skills/09-dashboard-kpis.md",
-    "skills/10-audit-psychologique.md"
+    "skills/10-audit-psychologique.md",
+    "skills/11-audit-concurrentiel.md",
+    "skills/12-veille-tendances.md",
+    "skills/13-carte-positionnement.md",
+    "skills/14-rapport-marche.md",
+    "skills/15-detection-opportunites.md"
   ],
   "context_file": "context/projet-actif.md"
 }

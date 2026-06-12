@@ -1,7 +1,7 @@
 # 🚀 Équipe Marketing IA — Plugin Cowork
 
-**7 agents IA spécialisés** en stratégie, copywriting, tunnel de vente et
-contenu. Réutilisable sur tous les projets grâce à une architecture en deux
+**8 agents IA spécialisés** en stratégie, copywriting, tunnel de vente,
+contenu et veille de marché. Réutilisable sur tous les projets grâce à une architecture en deux
 couches : le **moteur** (agents + skills, sans contexte client) et le
 **contexte** (un fichier projet interchangeable).
 
@@ -20,6 +20,7 @@ couches : le **moteur** (agents + skills, sans contexte client) et le
 | 📈 **Data Analyst** | KPIs, dashboards, analyses, A/B tests | `agents/05-data.md` |
 | 🎯 **Media Buyer** | Campagnes Meta Ads, du test au scale | `agents/06-media-buyer.md` |
 | 🧠 **Neuromarketing** | Validation des déclencheurs psychologiques | `agents/07-neuromarketing.md` |
+| 🔍 **Veilleur Stratégique** | Veille concurrence, tendances et opportunités de marché | `agents/08-veilleur.md` |
 
 L'agent par défaut est le **Stratège CMO** : adresse-lui ton brief, il
 analyse la situation et mandate les bons agents dans le bon ordre.
@@ -38,6 +39,11 @@ analyse la situation et mandate les bons agents dans le bon ordre.
 | `08-campagne-meta-ads.md` | Media Buyer, Copywriter |
 | `09-dashboard-kpis.md` | Data Analyst |
 | `10-audit-psychologique.md` | Neuromarketing, Copywriter |
+| `11-audit-concurrentiel.md` | Veilleur Stratégique, CMO |
+| `12-veille-tendances.md` | Veilleur Stratégique, Content Strategist, CMO |
+| `13-carte-positionnement.md` | Veilleur Stratégique, CMO |
+| `14-rapport-marche.md` | Veilleur Stratégique, CMO |
+| `15-detection-opportunites.md` | Veilleur Stratégique, CMO, Content Strategist |
 
 ---
 
@@ -93,8 +99,8 @@ equipe-marketing-ia/
 │   ├── TEMPLATE.md                → Template vierge à dupliquer
 │   ├── ambitieuse-assumee.md      → Contexte rempli pour Ange
 │   └── projet-actif.md            → Contexte actuellement actif (lu par les agents)
-├── agents/                        → Les 7 agents (rôles, skills, formats, instructions)
-├── skills/                        → Les 10 frameworks méthodologiques
+├── agents/                        → Les 8 agents (rôles, skills, formats, instructions)
+├── skills/                        → Les 15 frameworks méthodologiques
 └── README.md                      → Ce fichier
 ```
 
