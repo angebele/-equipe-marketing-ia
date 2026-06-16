@@ -1,11 +1,12 @@
 # 🚀 Équipe Marketing IA — Plugin Cowork
 
-**8 agents IA spécialisés** en stratégie, copywriting, tunnel de vente,
-contenu et veille de marché. Réutilisable sur tous les projets grâce à une architecture en deux
-couches : le **moteur** (agents + skills, sans contexte client) et le
-**contexte** (un fichier projet interchangeable).
+**11 agents IA spécialisés** en stratégie, copywriting, tunnel de vente,
+contenu, veille de marché, storytelling de marque, gestion des risques et
+intelligence des tendances. Réutilisable sur tous les projets grâce à une
+architecture en deux couches : le **moteur** (agents + skills, sans contexte
+client) et le **contexte** (un fichier projet interchangeable).
 
-> Auteur : Ange Belegue — Ambitieuse Assumée · Version 1.0.0
+> Auteur : Ange Belegue — Ambitieuse Assumée · Version 1.2.0
 
 ---
 
@@ -21,11 +22,19 @@ couches : le **moteur** (agents + skills, sans contexte client) et le
 | 🎯 **Media Buyer** | Campagnes Meta Ads, du test au scale | `agents/06-media-buyer.md` |
 | 🧠 **Neuromarketing** | Validation des déclencheurs psychologiques | `agents/07-neuromarketing.md` |
 | 🔍 **Veilleur Stratégique** | Veille concurrence, tendances et opportunités de marché | `agents/08-veilleur.md` |
+| 🎭 **Conteur de Marque** | Storytelling, voix de marque, archéologie de marque | `agents/09-storyteller.md` |
+| 🛡️ **Risk Manager & Red Team** | Challenge et stress-test des décisions avant exécution | `agents/10-risk-manager.md` |
+| 🔭 **Trend Hunter & Market Intelligence** | Ruptures plateformes, tech et IA au-delà du secteur | `agents/11-trend-hunter.md` |
 
 L'agent par défaut est le **Stratège CMO** : adresse-lui ton brief, il
 analyse la situation et mandate les bons agents dans le bon ordre.
 
-## Les 10 skills
+> 💡 Le Veilleur Stratégique (🔍) et le Trend Hunter (🔭) se complètent : le
+> premier surveille les concurrents directs du secteur, le second explore
+> les ruptures hors-secteur (plateformes, tech, IA) qui n'ont pas encore
+> atteint le secteur. Voir `agents/11-trend-hunter.md` pour le détail.
+
+## Les 29 skills
 
 | Skill | Utilisé par |
 |---|---|
@@ -44,6 +53,20 @@ analyse la situation et mandate les bons agents dans le bon ordre.
 | `13-carte-positionnement.md` | Veilleur Stratégique, CMO |
 | `14-rapport-marche.md` | Veilleur Stratégique, CMO |
 | `15-detection-opportunites.md` | Veilleur Stratégique, CMO, Content Strategist |
+| `16-story-mining.md` | Conteur de Marque |
+| `17-brand-voice-audit.md` | Conteur de Marque |
+| `18-creative-copywriting.md` | Conteur de Marque |
+| `19-content-engine.md` | Conteur de Marque |
+| `20-brand-archaeology.md` | Conteur de Marque |
+| `21-choc-initial.md` | Risk Manager & Red Team |
+| `22-risk-assessment.md` | Risk Manager & Red Team |
+| `23-pre-mortem.md` | Risk Manager & Red Team |
+| `24-socratic-squeezing.md` | Risk Manager & Red Team |
+| `25-pure-scouting.md` | Trend Hunter & Market Intelligence |
+| `26-market-destructuring.md` | Trend Hunter & Market Intelligence |
+| `27-ux-tech-insight.md` | Trend Hunter & Market Intelligence |
+| `28-unfair-opportunity-finder.md` | Trend Hunter & Market Intelligence |
+| `29-pure-ai-horizon.md` | Trend Hunter & Market Intelligence |
 
 ---
 
@@ -99,8 +122,8 @@ equipe-marketing-ia/
 │   ├── TEMPLATE.md                → Template vierge à dupliquer
 │   ├── ambitieuse-assumee.md      → Contexte rempli pour Ange
 │   └── projet-actif.md            → Contexte actuellement actif (lu par les agents)
-├── agents/                        → Les 8 agents (rôles, skills, formats, instructions)
-├── skills/                        → Les 15 frameworks méthodologiques
+├── agents/                        → Les 11 agents (rôles, skills, formats, instructions)
+├── skills/                        → Les 29 frameworks méthodologiques
 └── README.md                      → Ce fichier
 ```
 

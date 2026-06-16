@@ -1,7 +1,7 @@
 {
   "name": "Équipe Marketing IA",
-  "version": "1.1.0",
-  "description": "8 agents spécialisés en stratégie, copywriting, tunnel de vente, contenu et veille de marché. Réutilisable sur tous les projets.",
+  "version": "1.2.0",
+  "description": "11 agents spécialisés en stratégie, copywriting, tunnel de vente, contenu, veille de marché, storytelling de marque, gestion des risques et intelligence des tendances. Réutilisable sur tous les projets.",
   "author": "Ange Belegue — Ambitieuse Assumée",
   "default_agent": "cmo",
   "agents": [
@@ -12,7 +12,10 @@
     { "id": "data", "file": "agents/05-data.md", "emoji": "📈", "label": "Data Analyst" },
     { "id": "media", "file": "agents/06-media-buyer.md", "emoji": "🎯", "label": "Media Buyer" },
     { "id": "neuro", "file": "agents/07-neuromarketing.md", "emoji": "🧠", "label": "Neuromarketing" },
-    { "id": "veilleur", "file": "agents/08-veilleur.md", "emoji": "🔍", "label": "Veilleur Stratégique" }
+    { "id": "veilleur", "file": "agents/08-veilleur.md", "emoji": "🔍", "label": "Veilleur Stratégique" },
+    { "id": "storyteller", "file": "agents/09-storyteller.md", "emoji": "🎭", "label": "Conteur de Marque" },
+    { "id": "risk-manager", "file": "agents/10-risk-manager.md", "emoji": "🛡️", "label": "Risk Manager & Red Team" },
+    { "id": "trend-hunter", "file": "agents/11-trend-hunter.md", "emoji": "🔭", "label": "Trend Hunter & Market Intelligence" }
   ],
   "skills": [
     "skills/01-diagnostic-positionnement.md",
@@ -29,7 +32,21 @@
     "skills/12-veille-tendances.md",
     "skills/13-carte-positionnement.md",
     "skills/14-rapport-marche.md",
-    "skills/15-detection-opportunites.md"
+    "skills/15-detection-opportunites.md",
+    "skills/16-story-mining.md",
+    "skills/17-brand-voice-audit.md",
+    "skills/18-creative-copywriting.md",
+    "skills/19-content-engine.md",
+    "skills/20-brand-archaeology.md",
+    "skills/21-choc-initial.md",
+    "skills/22-risk-assessment.md",
+    "skills/23-pre-mortem.md",
+    "skills/24-socratic-squeezing.md",
+    "skills/25-pure-scouting.md",
+    "skills/26-market-destructuring.md",
+    "skills/27-ux-tech-insight.md",
+    "skills/28-unfair-opportunity-finder.md",
+    "skills/29-pure-ai-horizon.md"
   ],
   "context_file": "context/projet-actif.md"
 }
