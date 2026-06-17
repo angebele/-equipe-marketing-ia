@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Révèle ta marque — Ange Belegue · Mentor en Personal Branding</title>
+<meta name="description" content="Et si ton image en ligne reflétait enfin ce que tu vaux vraiment ? Accompagnement personal branding sur-mesure. Réserve ton appel découverte gratuit." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Révèle ta marque — Ange Belegue" />
+<meta property="og:description" content="Avant même que tu parles, on te cherche, on te juge, on te choisit — ou pas. Révèle ton image de marque." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..600&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   PALETTE — Citrus / Champagne (Ange Belegue)
+   ============================================================ */
+:root{
+  --citrus:    #FF9E0F;   /* Neon Citrus  — primaire vif        */
+  --champagne: #F5E5CC;   /* Champagne Glow — fond crème        */
+  --zest:      #C0451B;   /* Orange Zest — orange brûlé         */
+  --fizz:      #FFCC99;   /* Citrus Fizz — pêche douce          */
+  --berry:     #7D0000;   /* Berry Pop — rouge profond          */
+  --ink:       #2E1410;   /* texte — brun quasi-noir chaud      */
+  --ink-soft:  #6b4a3f;   /* texte secondaire                   */
+  --paper:     #FFF9F0;   /* blanc cassé chaud                  */
+
+  --max: 1240px;
+  --gut: clamp(1.25rem, 5vw, 4rem);
+
+  --r-sm: 12px;
+  --r-md: 22px;
+  --r-lg: 38px;
+  --r-pill: 999px;
+
+  --shadow: 0 18px 50px -20px rgba(46,20,16,.35);
+  --shadow-sm: 0 8px 24px -12px rgba(46,20,16,.30);
+
+  --serif: "Fraunces", Georgia, serif;
+  --sans:  "DM Sans", system-ui, -apple-system, sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--champagne);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ---------- Typo helpers ---------- */
+h1,h2,h3{font-family:var(--serif);line-height:1.05;font-weight:600;letter-spacing:-.02em}
+.eyebrow{
+  font-family:var(--sans);
+  font-weight:700;
+  font-size:.78rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--zest);
+  display:inline-flex;align-items:center;gap:.6rem;
+}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--zest);display:inline-block}
+.italic-accent{font-style:italic;font-weight:400;color:var(--zest)}
+
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+section{padding-block:clamp(4rem,9vw,8rem)}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:var(--sans);font-weight:700;font-size:1.02rem;
+  padding:1.05rem 2rem;border-radius:var(--r-pill);
+  cursor:pointer;border:2px solid transparent;
+  transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s, background .25s;
+  will-change:transform;
+}
+.btn-primary{background:var(--berry);color:var(--paper);box-shadow:var(--shadow-sm)}
+.btn-primary:hover{transform:translateY(-3px) rotate(-.5deg);box-shadow:0 22px 40px -16px rgba(125,0,0,.6)}
+.btn-citrus{background:var(--citrus);color:var(--ink)}
+.btn-citrus:hover{transform:translateY(-3px);box-shadow:0 22px 40px -16px rgba(255,158,15,.7)}
+.btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn .arrow{transition:transform .25s}
+.btn:hover .arrow{transform:translateX(4px)}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:saturate(140%) blur(10px);
+  background:color-mix(in srgb, var(--champagne) 82%, transparent);
+  border-bottom:1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:1rem}
+.logo{font-family:var(--serif);font-weight:600;font-size:1.45rem;letter-spacing:-.02em}
+.logo b{color:var(--zest);font-style:italic;font-weight:400}
+.nav-cta{display:none}
+@media(min-width:760px){.nav-cta{display:inline-flex;padding:.7rem 1.4rem;font-size:.92rem}}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;padding-top:clamp(3rem,8vw,6rem);padding-bottom:clamp(4rem,9vw,7rem);overflow:hidden}
+.hero::before{ /* gros blob citrus */
+  content:"";position:absolute;top:-22%;right:-14%;
+  width:55vw;height:55vw;max-width:760px;max-height:760px;
+  background:radial-gradient(circle at 35% 35%, var(--citrus), var(--zest) 78%);
+  border-radius:48% 52% 60% 40% / 52% 44% 56% 48%;
+  filter:blur(2px);opacity:.92;z-index:0;
+  animation:morph 14s ease-in-out infinite;
+}
+.hero::after{ /* petit blob pêche */
+  content:"";position:absolute;bottom:-12%;left:-8%;
+  width:30vw;height:30vw;max-width:380px;max-height:380px;
+  background:var(--fizz);border-radius:50%;z-index:0;opacity:.7;
+}
+@keyframes morph{
+  0%,100%{border-radius:48% 52% 60% 40% / 52% 44% 56% 48%}
+  50%{border-radius:60% 40% 44% 56% / 40% 56% 44% 60%}
+}
+.hero .wrap{position:relative;z-index:2;max-width:920px}
+.hero h1{
+  font-size:clamp(2.6rem,6.6vw,5.3rem);
+  font-weight:600;margin:1.4rem 0 1.5rem;
+}
+.hero h1 .hl{color:var(--berry);font-style:italic;font-weight:400}
+.hero .sub{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:clamp(1.2rem,2.4vw,1.7rem);color:var(--zest);
+  max-width:40ch;margin-bottom:1rem;
+}
+.hero .body{font-size:1.15rem;color:var(--ink-soft);max-width:46ch;margin-bottom:2.2rem}
+.hero-cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+
+/* trust flash */
+.trust-flash{
+  margin-top:2.2rem;display:inline-flex;align-items:center;gap:.8rem;
+  background:var(--paper);border-radius:var(--r-pill);
+  padding:.7rem 1.3rem;box-shadow:var(--shadow-sm);
+  font-size:.95rem;font-weight:500;
+}
+.stars{color:var(--citrus);letter-spacing:2px}
+.trust-flash b{color:var(--berry)}
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+.marquee{background:var(--berry);color:var(--champagne);padding:.9rem 0;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:2.5rem;animation:scroll 26s linear infinite;font-family:var(--serif);font-style:italic;font-size:1.25rem}
+.marquee-track span{display:inline-flex;gap:2.5rem;align-items:center}
+.marquee-track span::after{content:"✦";color:var(--citrus);font-style:normal}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============================================================
+   GENERIC SECTION TITLES
+   ============================================================ */
+.section-head{max-width:760px;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.section-head h2{font-size:clamp(2rem,4.6vw,3.6rem);margin:1rem 0}
+.lead{font-size:1.18rem;color:var(--ink-soft)}
+
+/* PROBLÈME */
+.problem{background:var(--ink);color:var(--champagne)}
+.problem .eyebrow{color:var(--citrus)}
+.problem .eyebrow::before{background:var(--citrus)}
+.problem h2{color:var(--champagne)}
+.problem .lead{color:color-mix(in srgb,var(--champagne) 78%,transparent)}
+.problem p + p{margin-top:1.1rem}
+.problem .punch{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--citrus);margin-top:1.6rem}
+
+/* REFRAME — grande déclaration */
+.reframe{background:var(--citrus);color:var(--ink);text-align:center}
+.reframe h2{font-size:clamp(2.2rem,5.5vw,4.4rem);max-width:18ch;margin-inline:auto}
+.reframe .body{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,3vw,2rem);margin-top:1.5rem;color:var(--berry)}
+
+/* ============================================================
+   TRANSFORMATION — Avant / Après
+   ============================================================ */
+.transform{background:var(--champagne)}
+.ba-grid{display:grid;gap:1.2rem;grid-template-columns:1fr;margin-top:1rem}
+@media(min-width:820px){.ba-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+.ba-card{border-radius:var(--r-lg);padding:clamp(1.6rem,3vw,2.4rem)}
+.ba-before{background:var(--paper);border:2px dashed color-mix(in srgb,var(--ink) 25%,transparent)}
+.ba-after{background:var(--berry);color:var(--champagne);box-shadow:var(--shadow)}
+.ba-card h3{font-size:1.5rem;margin-bottom:1.4rem;display:flex;align-items:center;gap:.6rem}
+.ba-after h3{color:var(--citrus)}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.ba-list li{display:flex;gap:.8rem;align-items:flex-start;font-size:1.06rem}
+.ba-list li::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;margin-top:2px}
+.ba-before li::before{content:"✕";color:var(--ink-soft);background:none;font-weight:700;display:flex;align-items:center;justify-content:center}
+.ba-after li::before{content:"✓";color:var(--berry);background:var(--citrus);font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* PORTFOLIO carousel */
+.portfolio{margin-top:3.5rem}
+.portfolio h3{font-size:1.4rem;margin-bottom:.4rem}
+.portfolio p.hint{color:var(--ink-soft);font-size:.95rem;margin-bottom:1.4rem}
+.carousel{display:flex;gap:1.2rem;overflow-x:auto;padding-bottom:1rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.carousel::-webkit-scrollbar{height:8px}
+.carousel::-webkit-scrollbar-thumb{background:var(--zest);border-radius:99px}
+.slide{
+  scroll-snap-align:start;flex:0 0 78%;max-width:340px;aspect-ratio:4/5;
+  border-radius:var(--r-md);background:linear-gradient(160deg,var(--fizz),var(--citrus));
+  display:flex;align-items:flex-end;padding:1.4rem;color:var(--ink);font-weight:700;
+  position:relative;overflow:hidden;
+}
+.slide:nth-child(2n){background:linear-gradient(160deg,var(--zest),var(--berry));color:var(--champagne)}
+.slide:nth-child(3n){background:linear-gradient(160deg,var(--berry),var(--ink));color:var(--champagne)}
+.slide .tag{position:absolute;top:1rem;left:1rem;background:rgba(255,255,255,.85);color:var(--ink);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .7rem;border-radius:99px}
+@media(min-width:820px){.slide{flex-basis:30%}}
+
+/* ============================================================
+   MÉTHODE
+   ============================================================ */
+.method{background:var(--paper)}
+.steps{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;font-family:var(--serif);font-size:clamp(1.3rem,3vw,2.1rem);font-weight:600;margin-bottom:.8rem}
+.steps .from{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--zest)}
+.steps .to{color:var(--berry);font-style:italic}
+.steps .sep{color:var(--citrus)}
+.method .lead{margin-bottom:3rem}
+.pillars{display:grid;gap:1.2rem;grid-template-columns:1fr}
+@media(min-width:640px){.pillars{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.pillars{grid-template-columns:repeat(4,1fr)}}
+.pillar{background:var(--champagne);border-radius:var(--r-md);padding:1.8rem 1.5rem;border-top:5px solid var(--citrus);transition:transform .25s,box-shadow .25s}
+.pillar:nth-child(2){border-top-color:var(--zest)}
+.pillar:nth-child(3){border-top-color:var(--berry)}
+.pillar:nth-child(4){border-top-color:var(--fizz)}
+.pillar:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.pillar .num{font-family:var(--serif);font-size:2.4rem;font-weight:600;color:var(--zest);line-height:1}
+.pillar h3{font-size:1.25rem;margin:.6rem 0 .5rem}
+.pillar p{font-size:.98rem;color:var(--ink-soft)}
+.method-note{margin-top:2.6rem;font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--berry)}
+
+/* ============================================================
+   POURQUOI MOI — comparatif
+   ============================================================ */
+.why{background:var(--zest);color:var(--champagne)}
+.why .eyebrow{color:var(--fizz)}
+.why .eyebrow::before{background:var(--fizz)}
+.why h2{color:var(--champagne)}
+.compare{display:grid;gap:1.2rem;grid-template-columns:1fr;margin-top:1rem}
+@media(min-width:820px){.compare{grid-template-columns:1fr 1fr;gap:1.8rem}}
+.compare-card{border-radius:var(--r-lg);padding:clamp(1.6rem,3vw,2.4rem)}
+.c-agency{background:color-mix(in srgb,var(--ink) 35%,var(--zest));opacity:.92}
+.c-me{background:var(--champagne);color:var(--ink);box-shadow:var(--shadow)}
+.compare-card h3{font-size:1.5rem;margin-bottom:1.2rem}
+.c-me h3{color:var(--berry)}
+.crow{display:flex;flex-direction:column;gap:.2rem;padding:.9rem 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}
+.crow:last-child{border-bottom:none}
+.crow .k{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;opacity:.7;font-weight:700}
+.crow .v{font-size:1.05rem}
+.bio{margin-top:3rem;background:var(--berry);border-radius:var(--r-lg);padding:clamp(1.8rem,3.5vw,2.8rem);max-width:760px}
+.bio p{font-size:1.12rem}
+.bio .sign{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--citrus);margin-top:.8rem;display:block}
+
+/* ============================================================
+   POUR QUI
+   ============================================================ */
+.forwho{background:var(--champagne)}
+.fw-grid{display:grid;gap:1.5rem;grid-template-columns:1fr}
+@media(min-width:820px){.fw-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+.fw-card{border-radius:var(--r-lg);padding:clamp(1.8rem,3vw,2.6rem)}
+.fw-yes{background:var(--paper);border:2px solid var(--citrus)}
+.fw-no{background:var(--paper);border:2px solid color-mix(in srgb,var(--ink) 14%,transparent)}
+.fw-card h3{font-size:1.6rem;margin-bottom:1.4rem}
+.fw-yes h3{color:var(--berry)}
+.fw-no h3{color:var(--ink-soft)}
+.fw-list{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.fw-list li{display:flex;gap:.8rem;font-size:1.05rem}
+.fw-yes li::before{content:"✓";color:var(--berry);font-weight:800}
+.fw-no li{color:var(--ink-soft)}
+.fw-no li::before{content:"✕";color:var(--zest);font-weight:800}
+
+/* ============================================================
+   TÉMOIGNAGES
+   ============================================================ */
+.testi{background:var(--fizz)}
+.testi-grid{display:grid;gap:1.4rem;grid-template-columns:1fr;margin-top:1rem}
+@media(min-width:760px){.testi-grid{grid-template-columns:repeat(3,1fr)}}
+.tcard{background:var(--paper);border-radius:var(--r-md);padding:1.8rem;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:1rem}
+.tcard .quote{font-family:var(--serif);font-style:italic;font-size:1.12rem}
+.tcard .who{display:flex;align-items:center;gap:.8rem;margin-top:auto}
+.tcard .avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(150deg,var(--citrus),var(--berry));flex:0 0 44px;display:flex;align-items:center;justify-content:center;color:var(--paper);font-weight:700;font-family:var(--serif)}
+.tcard .who b{display:block}
+.tcard .who small{color:var(--ink-soft)}
+.testi .stars{font-size:1.1rem}
+.placeholder-note{margin-top:1.5rem;font-size:.85rem;color:var(--ink-soft);font-style:italic}
+
+/* ============================================================
+   GARANTIE
+   ============================================================ */
+.guarantee{background:var(--berry);color:var(--champagne);text-align:center}
+.guarantee .badge{font-size:3rem;margin-bottom:1rem}
+.guarantee h2{color:var(--citrus);font-size:clamp(1.8rem,4vw,3rem);max-width:20ch;margin:0 auto 1.4rem}
+.guarantee p{max-width:46ch;margin:0 auto;font-size:1.15rem}
+.guarantee p.kicker{font-family:var(--serif);font-style:italic;color:var(--fizz);margin-top:1rem;font-size:1.3rem}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq{background:var(--paper)}
+.faq-list{max-width:780px;margin-top:1rem}
+.faq-item{border-bottom:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  font-family:var(--serif);font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:600;color:var(--ink);
+  padding:1.5rem 2.5rem 1.5rem 0;position:relative;display:block}
+.faq-q::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.8rem;color:var(--zest);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--ink-soft);font-size:1.06rem}
+.faq-a p{padding-bottom:1.5rem}
+
+/* ============================================================
+   CTA FINAL
+   ============================================================ */
+.final{background:var(--ink);color:var(--champagne);text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:80vw;max-width:700px;height:700px;background:radial-gradient(circle,var(--zest),transparent 65%);opacity:.55;z-index:0}
+.final .wrap{position:relative;z-index:2}
+.final .urgency{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,3.4vw,2.4rem);color:var(--citrus);max-width:22ch;margin:0 auto 1.4rem}
+.final p.body{max-width:46ch;margin:0 auto 2.2rem;font-size:1.15rem;color:color-mix(in srgb,var(--champagne) 80%,transparent)}
+.final .micro-testi{display:inline-block;margin-bottom:1.8rem;font-size:.98rem;color:var(--fizz)}
+.final .microcopy{margin-top:1.2rem;font-size:.92rem;color:color-mix(in srgb,var(--champagne) 65%,transparent)}
+.exit-link{display:inline-block;margin-top:1.6rem;font-size:.9rem;color:color-mix(in srgb,var(--champagne) 50%,transparent);text-decoration:underline;text-underline-offset:3px}
+.exit-link:hover{color:var(--fizz)}
+
+/* FOOTER */
+.site-footer{background:var(--ink);color:color-mix(in srgb,var(--champagne) 60%,transparent);padding:2.5rem 0;text-align:center;border-top:1px solid color-mix(in srgb,var(--champagne) 12%,transparent);font-size:.9rem}
+.site-footer .logo{font-size:1.2rem;color:var(--champagne);margin-bottom:.5rem}
+
+/* ============================================================
+   REVEAL ON SCROLL
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero::before{animation:none}
+  .marquee-track{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="logo">Ange <b>Belegue</b></a>
+    <a href="#book" class="btn btn-primary nav-cta">Réserver mon appel <span class="arrow">→</span></a>
+  </div>
+</header>
+
+<!-- ============ S1 · HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow reveal">Personal Branding · Accompagnement sur-mesure</span>
+    <h1 class="reveal">Et si ton image en ligne reflétait enfin <span class="hl">ce que tu vaux vraiment</span> ?</h1>
+    <p class="sub reveal">Avant même que tu parles, on te cherche, on te juge, on te choisit — ou pas.</p>
+    <p class="body reveal">Ton image digitale n'est plus une option. C'est ta première impression.</p>
+    <div class="hero-cta-row reveal">
+      <a href="#book" class="btn btn-primary">Oui, je révèle ma marque <span class="arrow">→</span></a>
+      <a href="#method" class="btn btn-ghost">Voir la méthode</a>
+    </div>
+    <!-- TÉMOIGNAGE #1 — signal de confiance flash -->
+    <div class="trust-flash reveal">
+      <span class="stars">★★★★★</span>
+      <span>« En 6 semaines, +3 clients premium » — <b>Camille</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Invisible → Incontournable</span><span>Générique → Unique</span><span>Tu attires. Tu sélectionnes.</span>
+    <span>Invisible → Incontournable</span><span>Générique → Unique</span><span>Tu attires. Tu sélectionnes.</span>
+  </div>
+</div>
+
+<!-- ============ S2 · LE PROBLÈME ============ -->
+<section class="problem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Le constat</span>
+      <h2>Aujourd'hui, ton image compte plus que tes mots.</h2>
+    </div>
+    <p class="lead reveal">La façon dont tu te présentes au monde, et ce qu'on retient de toi : c'est ça qui décide, avant même que tu parles.</p>
+    <p class="lead reveal">Tu as de la valeur, des résultats — mais en ligne, tu es invisible, ou ton image ne te ressemble plus.</p>
+    <p class="punch reveal">Ce n'est pas un problème de talent. C'est un problème de présence et de méthode.</p>
+  </div>
+</section>
+
+<!-- ============ S3 · LE REFRAME ============ -->
+<section class="reframe">
+  <div class="wrap">
+    <h2 class="reveal">Quand ton personal branding est solide, tu n'es plus dans la course.</h2>
+    <p class="body reveal">Tu attires. Tu sélectionnes. Ce sont les bonnes personnes qui viennent à toi.</p>
+  </div>
+</section>
+
+<!-- ============ S4 · TRANSFORMATION ============ -->
+<section class="transform">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">La transformation</span>
+      <h2>Je t'aide à révéler ton image de marque. <span class="italic-accent">Qui parle pour toi ?</span></h2>
+    </div>
+
+    <div class="ba-grid">
+      <div class="ba-card ba-before reveal">
+        <h3>Avant</h3>
+        <ul class="ba-list">
+          <li>Tu cours après les clients</li>
+          <li>Tu t'expliques à chaque fois</li>
+          <li>Ton image ne reflète pas ton niveau</li>
+          <li>Tu dépends du bouche-à-oreille</li>
+        </ul>
+      </div>
+      <div class="ba-card ba-after reveal">
+        <h3>Après</h3>
+        <ul class="ba-list">
+          <li>Les bons clients te trouvent</li>
+          <li>Ils comprennent immédiatement qui tu es</li>
+          <li>Ton image parle pour toi</li>
+          <li>Tu choisis avec qui tu travailles</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CARROUSEL PORTFOLIO -->
+    <div class="portfolio reveal">
+      <h3>Quelques réalisations</h3>
+      <p class="hint">Avant / après concrets, projets clients, formats vidéo. (Glisse →)</p>
+      <div class="carousel">
+        <div class="slide"><span class="tag">Identité</span>Refonte de marque · Coach</div>
+        <div class="slide"><span class="tag">Contenu</span>Ligne édito · Consultante</div>
+        <div class="slide"><span class="tag">Site</span>Tunnel de vente · Thérapeute</div>
+        <div class="slide"><span class="tag">Vidéo</span>Format signature · Formatrice</div>
+      </div>
+    </div>
+
+    <div class="hero-cta-row reveal" style="margin-top:2.5rem">
+      <a href="#book" class="btn btn-citrus">Je réserve mon appel découverte <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S5 · LA MÉTHODE ============ -->
+<section class="method" id="method">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">La méthode</span>
+      <h2>Trois étapes, un seul chemin.</h2>
+    </div>
+    <div class="steps reveal">
+      <span class="from">Invisible</span><span class="sep">→</span><span class="to">incontournable</span>
+    </div>
+    <div class="steps reveal">
+      <span class="from">Générique</span><span class="sep">→</span><span class="to">unique</span>
+    </div>
+    <p class="lead reveal">Présente partout où ta cible te cherche.</p>
+
+    <h3 class="reveal" style="font-size:clamp(1.6rem,3.5vw,2.4rem);margin:3.5rem 0 1.8rem">Quatre piliers, activés selon ton profil.</h3>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="num">01</div><h3>Fondations</h3><p>Positionnement, message, stratégie.</p></div>
+      <div class="pillar reveal"><div class="num">02</div><h3>Identité visuelle</h3><p>Logo, charte, image.</p></div>
+      <div class="pillar reveal"><div class="num">03</div><h3>Contenu</h3><p>Vidéo, podcast, photos, édito.</p></div>
+      <div class="pillar reveal"><div class="num">04</div><h3>Vente</h3><p>Site, tunnel, IA.</p></div>
+    </div>
+    <p class="method-note reveal">12 séances, sur 1 à 3 mois. Moi, à chaque étape.</p>
+  </div>
+</section>
+
+<!-- ============ S6 · POURQUOI MOI ============ -->
+<section class="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pourquoi moi</span>
+      <h2>Une agence n'est pas toujours la bonne réponse.</h2>
+    </div>
+    <div class="compare">
+      <div class="compare-card c-agency reveal">
+        <h3>Une agence</h3>
+        <div class="crow"><span class="k">Interlocuteur</span><span class="v">Une équipe que tu ne rencontres jamais</span></div>
+        <div class="crow"><span class="k">Approche</span><span class="v">Un brief, un livrable</span></div>
+        <div class="crow"><span class="k">Implication</span><span class="v">Tu attends</span></div>
+        <div class="crow"><span class="k">Résultat</span><span class="v">Standardisé</span></div>
+        <div class="crow"><span class="k">Après</span><span class="v">Tu dépends d'eux</span></div>
+        <div class="crow"><span class="k">Facture</span><span class="v">Astronomique</span></div>
+      </div>
+      <div class="compare-card c-me reveal">
+        <h3>Moi</h3>
+        <div class="crow"><span class="k">Interlocuteur</span><span class="v">Moi. À chaque étape.</span></div>
+        <div class="crow"><span class="k">Approche</span><span class="v">On part de qui tu es.</span></div>
+        <div class="crow"><span class="k">Implication</span><span class="v">Tu es l'actrice principale</span></div>
+        <div class="crow"><span class="k">Résultat</span><span class="v">Unique. Fait pour toi.</span></div>
+        <div class="crow"><span class="k">Après</span><span class="v">Tout t'appartient. Tu es autonome.</span></div>
+        <div class="crow"><span class="k">Facture</span><span class="v">Ciblé sur ce dont tu as besoin</span></div>
+      </div>
+    </div>
+
+    <div class="bio reveal">
+      <p>Je suis Ange — mentor en personal branding. Un nombre limité de clientes, une implication totale. Pas de logo sans stratégie. Pas de stratégie sans identité.</p>
+      <span class="sign">— Ange</span>
+    </div>
+
+    <!-- TÉMOIGNAGE #2 — preuve relationnelle -->
+    <div class="trust-flash reveal" style="margin-top:2rem;background:var(--champagne);color:var(--ink)">
+      <span class="stars">★★★★★</span>
+      <span>« Pour la première fois, j'ai senti que quelqu'un comprenait vraiment ma vision. » — <b>Sarah</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S7 · POUR QUI ============ -->
+<section class="forwho">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pour qui</span>
+      <h2>C'est fait pour toi, <span class="italic-accent">ou pas.</span></h2>
+    </div>
+    <div class="fw-grid">
+      <div class="fw-card fw-yes reveal">
+        <h3>C'est fait pour toi si…</h3>
+        <ul class="fw-list">
+          <li>Tu as de la valeur mais ton image en ligne ne le reflète pas encore</li>
+          <li>Tu veux remettre ton image à niveau — celle d'aujourd'hui, pas celle d'hier</li>
+          <li>Tu fonctionnes au bouche-à-oreille et tu veux que les bons clients te trouvent seuls</li>
+          <li>Tu veux une présence qui te ressemble vraiment</li>
+          <li>Tu es prête à t'impliquer pour construire quelque chose de durable</li>
+        </ul>
+      </div>
+      <div class="fw-card fw-no reveal">
+        <h3>Ce n'est pas pour toi si…</h3>
+        <ul class="fw-list">
+          <li>Tu veux juste un logo ou un site sans stratégie</li>
+          <li>Tu veux déléguer sans t'impliquer</li>
+          <li>Tu n'es pas prête à remettre en question ta façon de te présenter</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S8 · TÉMOIGNAGES ============ -->
+<section class="testi">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Elles l'ont fait</span>
+      <h2>Ils ont révélé leur marque.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p class="quote">« Je ne cours plus après personne. Les demandes arrivent, et ce sont les bonnes. »</p>
+        <div class="who"><span class="avatar">C</span><span><b>Camille</b><small>Coach business</small></span></div>
+      </div>
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p class="quote">« Mon image reflète enfin mon niveau. Mes tarifs ont suivi, sans négociation. »</p>
+        <div class="who"><span class="avatar">S</span><span><b>Sarah</b><small>Consultante</small></span></div>
+      </div>
+      <div class="tcard reveal">
+        <span class="stars">★★★★★</span>
+        <p class="quote">« Un accompagnement humain, exigeant, sur-mesure. Rien à voir avec une agence. »</p>
+        <div class="who"><span class="avatar">L</span><span><b>Léa</b><small>Thérapeute</small></span></div>
+      </div>
+    </div>
+    <p class="placeholder-note reveal">Emplacement témoignages principal — 2 à 3 témoignages complets (prénom, activité, résultat, citation).</p>
+    <div class="hero-cta-row reveal" style="margin-top:2rem">
+      <a href="#book" class="btn btn-primary">Je réserve mon appel découverte <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S9 · GARANTIE ============ -->
+<section class="guarantee">
+  <div class="wrap">
+    <div class="badge reveal">✦</div>
+    <h2 class="reveal">Je m'engage sur ta transformation. Pas sur les livrables.</h2>
+    <p class="reveal">Si les résultats ne sont pas là, on continue — sans frais supplémentaires.</p>
+    <p class="kicker reveal">Je ne vends pas des heures. Je vends une transformation.</p>
+  </div>
+</section>
+
+<!-- ============ S10 · FAQ ============ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>Tout ce que tu te demandes.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">Avoir un site, c'est suffisant non ?</button>
+        <div class="faq-a"><p>Non. Tes clients te cherchent sur les réseaux, sur les IA, sur Google. Une seule présence ne suffit plus.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Combien de temps ça demande ?</button>
+        <div class="faq-a"><p>2 à 3 heures par semaine, sur un accompagnement de 1 à 3 mois.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Qu'est-ce qui se passe après l'appel ?</button>
+        <div class="faq-a"><p>Si on travaille ensemble, on fixe le démarrage et on construit dès la première séance.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Et si ça ne marche pas ?</button>
+        <div class="faq-a"><p>L'accompagnement est garanti sur les résultats. On continue jusqu'à ce que ce soit le cas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S11 · CTA FINAL ============ -->
+<section class="final" id="book">
+  <div class="wrap">
+    <p class="urgency reveal">Chaque semaine qui passe, c'est un client qui ne t'a pas trouvée.</p>
+    <p class="body reveal">L'appel découverte est gratuit, sans engagement. Une heure pour savoir ce qu'il faut construire en premier.</p>
+    <!-- TÉMOIGNAGE #4 — dernière micro-preuve -->
+    <span class="micro-testi reveal">★★★★★ « La meilleure décision de mon année. » — Léa</span>
+    <div class="reveal">
+      <a href="#" class="btn btn-citrus" style="font-size:1.15rem;padding:1.2rem 2.4rem">Je réserve mon appel découverte <span class="arrow">→</span></a>
+    </div>
+    <p class="microcopy reveal">Une heure pour tout comprendre. Zéro engagement pour la suite.</p>
+    <a href="#top" class="exit-link reveal">Non merci, je préfère rester invisible.</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="logo">Ange <b style="color:var(--citrus);font-style:italic;font-weight:400">Belegue</b></div>
+    <p>Mentor en personal branding · Ambitieuse Assumée</p>
+    <p style="margin-top:.5rem;opacity:.6">© 2026 — Tous droits réservés</p>
+  </div>
+</footer>
+
+<script>
+/* FAQ accordion */
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click', function(){
+    var item = q.parentElement;
+    var ans = q.nextElementSibling;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){
+      o.classList.remove('open');
+      o.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      ans.style.maxHeight = ans.scrollHeight + 'px';
+    }
+  });
+});
+
+/* Reveal on scroll */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+},{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
