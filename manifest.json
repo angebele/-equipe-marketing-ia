@@ -1,7 +1,7 @@
 {
   "name": "Équipe Marketing IA",
-  "version": "1.2.0",
-  "description": "11 agents spécialisés en stratégie, copywriting, tunnel de vente, contenu, veille de marché, storytelling de marque, gestion des risques et intelligence des tendances. Réutilisable sur tous les projets.",
+  "version": "1.3.0",
+  "description": "12 agents spécialisés en stratégie, copywriting, tunnel de vente, contenu, veille de marché, storytelling de marque, gestion des risques, intelligence des tendances et validation d'idées. Réutilisable sur tous les projets.",
   "author": "Ange Belegue — Ambitieuse Assumée",
   "default_agent": "cmo",
   "agents": [
@@ -15,7 +15,8 @@
     { "id": "veilleur", "file": "agents/08-veilleur.md", "emoji": "🔍", "label": "Veilleur Stratégique" },
     { "id": "storyteller", "file": "agents/09-storyteller.md", "emoji": "🎭", "label": "Conteur de Marque" },
     { "id": "risk-manager", "file": "agents/10-risk-manager.md", "emoji": "🛡️", "label": "Risk Manager & Red Team" },
-    { "id": "trend-hunter", "file": "agents/11-trend-hunter.md", "emoji": "🔭", "label": "Trend Hunter & Market Intelligence" }
+    { "id": "trend-hunter", "file": "agents/11-trend-hunter.md", "emoji": "🔭", "label": "Trend Hunter & Market Intelligence" },
+    { "id": "evaluateur-idees", "file": "agents/12-evaluateur-idees.md", "emoji": "🎲", "label": "Évaluateur d'Idées" }
   ],
   "skills": [
     "skills/01-diagnostic-positionnement.md",
@@ -46,7 +47,17 @@
     "skills/26-market-destructuring.md",
     "skills/27-ux-tech-insight.md",
     "skills/28-unfair-opportunity-finder.md",
-    "skills/29-pure-ai-horizon.md"
+    "skills/29-pure-ai-horizon.md",
+    "skills/30-validation-marche.md",
+    "skills/31-scoring-idee.md",
+    "skills/32-timing-fenetre.md",
+    "skills/33-mvp-design.md",
+    "skills/34-positionnement-comparatif.md",
+    "skills/35-brand-cible-alignment.md",
+    "skills/36-amplification-ambitieuse.md",
+    "skills/37-roi-forecast.md",
+    "skills/38-risk-charge-forecast.md",
+    "skills/39-verdict-roadmap.md"
   ],
   "context_file": "context/projet-actif.md"
 }

@@ -1,12 +1,11 @@
 # 🚀 Équipe Marketing IA — Plugin Cowork
 
-**11 agents IA spécialisés** en stratégie, copywriting, tunnel de vente,
-contenu, veille de marché, storytelling de marque, gestion des risques et
-intelligence des tendances. Réutilisable sur tous les projets grâce à une
+**12 agents IA spécialisés** en stratégie, copywriting, tunnel de vente,
+contenu, veille de marché, storytelling de marque, gestion des risques, intelligence des tendances et **validation d'idées marketing complète**. Réutilisable sur tous les projets grâce à une
 architecture en deux couches : le **moteur** (agents + skills, sans contexte
 client) et le **contexte** (un fichier projet interchangeable).
 
-> Auteur : Ange Belegue — Ambitieuse Assumée · Version 1.2.0
+> Auteur : Ange Belegue — Ambitieuse Assumée · Version 1.3.0
 
 ---
 
@@ -25,6 +24,7 @@ client) et le **contexte** (un fichier projet interchangeable).
 | 🎭 **Conteur de Marque** | Storytelling, voix de marque, archéologie de marque | `agents/09-storyteller.md` |
 | 🛡️ **Risk Manager & Red Team** | Challenge et stress-test des décisions avant exécution | `agents/10-risk-manager.md` |
 | 🔭 **Trend Hunter & Market Intelligence** | Ruptures plateformes, tech et IA au-delà du secteur | `agents/11-trend-hunter.md` |
+| 🎲 **Évaluateur d'Idées** | Valide une idée marketing de tous les angles ; produit verdict nuancé + roadmap | `agents/12-evaluateur-idees.md` |
 
 L'agent par défaut est le **Stratège CMO** : adresse-lui ton brief, il
 analyse la situation et mandate les bons agents dans le bon ordre.
@@ -34,7 +34,13 @@ analyse la situation et mandate les bons agents dans le bon ordre.
 > les ruptures hors-secteur (plateformes, tech, IA) qui n'ont pas encore
 > atteint le secteur. Voir `agents/11-trend-hunter.md` pour le détail.
 
-## Les 29 skills
+> 🎲 L'Évaluateur d'Idées (🎲) orchestre un process complet de validation :
+> il demande aux autres agents des analyses en parallèle (marché, risques,
+> brand alignment, timing, ROI, charge) et livre un verdict nuancé
+> (extension naturelle / pivot léger / pivot majeur / multi-cible viability)
+> avec roadmap de lancement en 3 phases.
+
+## Les 39 skills
 
 | Skill | Utilisé par |
 |---|---|
@@ -67,6 +73,16 @@ analyse la situation et mandate les bons agents dans le bon ordre.
 | `27-ux-tech-insight.md` | Trend Hunter & Market Intelligence |
 | `28-unfair-opportunity-finder.md` | Trend Hunter & Market Intelligence |
 | `29-pure-ai-horizon.md` | Trend Hunter & Market Intelligence |
+| `30-validation-marche.md` | Évaluateur d'Idées |
+| `31-scoring-idee.md` | Évaluateur d'Idées |
+| `32-timing-fenetre.md` | Évaluateur d'Idées |
+| `33-mvp-design.md` | Évaluateur d'Idées |
+| `34-positionnement-comparatif.md` | Évaluateur d'Idées |
+| `35-brand-cible-alignment.md` | Évaluateur d'Idées |
+| `36-amplification-ambitieuse.md` | Évaluateur d'Idées |
+| `37-roi-forecast.md` | Évaluateur d'Idées |
+| `38-risk-charge-forecast.md` | Évaluateur d'Idées |
+| `39-verdict-roadmap.md` | Évaluateur d'Idées |
 
 ---
 
@@ -122,8 +138,8 @@ equipe-marketing-ia/
 │   ├── TEMPLATE.md                → Template vierge à dupliquer
 │   ├── ambitieuse-assumee.md      → Contexte rempli pour Ange
 │   └── projet-actif.md            → Contexte actuellement actif (lu par les agents)
-├── agents/                        → Les 11 agents (rôles, skills, formats, instructions)
-├── skills/                        → Les 29 frameworks méthodologiques
+├── agents/                        → Les 12 agents (rôles, skills, formats, instructions)
+├── skills/                        → Les 39 frameworks méthodologiques
 └── README.md                      → Ce fichier
 ```
 
